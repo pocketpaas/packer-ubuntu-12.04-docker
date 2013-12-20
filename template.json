@@ -88,6 +88,13 @@
         {
             "type": "shell",
             "scripts": [
+                "scripts/pocketpaas_dev.sh"
+            ],
+            "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+        },
+        {
+            "type": "shell",
+            "scripts": [
                 "scripts/vm_cleanup.sh"
             ],
             "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
